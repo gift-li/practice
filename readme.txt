@@ -1,8 +1,10 @@
-nice
-
-
-
-
-
-
-as;fdj;la
+how to use git?
+1.set respiratory as origin :  git remote add origin https://github.com/gift-li/practice.git
+2.get data :    git pull
+3.modify your documents
+4.check status :    git status
+5.update: (remember to git add whenever you modify your documents before commit and push.)
+ git add . / git add <doc>
+ git commit -m "message"
+ git push origin master / git push https://github.com/gift-li/practice.git master
+6.complete
