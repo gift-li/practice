@@ -1,4 +1,4 @@
-how to use git?
+<b3>how to use git?</b3>
 1.set respiratory as origin :  git remote add origin https://github.com/gift-li/practice.git
 2.get data :    git pull
 3.modify your documents
