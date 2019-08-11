@@ -1,3 +1,3 @@
-*Giftli's coding environment
+Giftli's coding environment
 ---
 for the greater good
