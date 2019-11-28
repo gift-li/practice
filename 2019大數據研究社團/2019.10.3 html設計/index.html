@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>備忘錄ヽ(●´∀`●)ﾉ</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- 引入CSS -->
+	</head>
+
+	<body>
+		<div id="header">   <!-- 設定唯一id -->
+			<h1>My Memo</h1>
+			<p>快來寫點東西~~~ ヽ(●´ε｀●)ノ</p>
+            <input id="myInput" type="text" placeholder="想記些什麼...">
+            <!-- input欄位 -->
+            <button id="addBtn" class="memoBtn">add</button>
+            <!-- 按鈕設置 -->
+		</div>
+		<div>
+			<div id="waiting">
+				<div class="category">待辦事項</div>
+				<div>
+					<ul id="myWaiting">
+						<li>幫小明買早餐</li>
+						<li>完成微積分作業</li>
+						<li>讀計概 ch8</li>
+						<li>Keep going on!!!</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id="finished">
+				<div class="category">已完成</div>
+				<div>
+					<ul id="myFinished">
+						<li class='checked'>交學費 35000</li>
+						<li class='checked'>7-11 取貨</li>
+					</ul>
+				</div>
+			</div>
+			
+			<button id="hide" class="memoBtn">Hide</button>
+			<button id="show" class="memoBtn">Show</button>
+			
+			<button id="HideAndShow" class="memoBtn">Hide Completed</button>
+		</div>
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        $('#addBtn').on('click', function () { //在addBtn下掛onclick
+	            if ($('#myInput').val()) { //確認input裡確實有東西
+	                $('#myWaiting').append("<li>" + $('#myInput').val() + "</li>"); //在myWaiting後新增內容
+	                $('#myInput').val(""); //清空myInput
+	            }
+				else {
+	                alert("要記什麼啦 ヽ(#`Д´)ﾉ");
+	            }
+	        });
+	 
+	        $('#myWaiting').on('click', 'li', function () {
+	            $('#myFinished').append("<li class='checked'>" + $(this).text() + "</li>");
+	            $(this).remove($(this).val());
+	        });
+	 
+	 		$("#HideAndShow").on('click',function(){
+		    	$("#finished").toggle();
+		    	if($(this).text()==="Hide Completed") $(this).text("Show Completed");
+		    	else $(this).text("Hide Completed");
+		    	// $("#HideAndShow").text("Show Completed");
+		   	})
+	 
+	    });
+	</script>
+</html>
