@@ -52,11 +52,11 @@ ul li:nth-child(even) {
 }
 
 ul li:nth-child(odd) {
-  background: #F0FFFF;
+  background: rgb(54, 160, 160);
 }
 
 ul li:hover {
-  background: #EFEFEF;
+  background: rgb(212, 21, 21);
 }
 
 .category {
